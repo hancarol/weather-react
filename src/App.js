@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Search from "./Search";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Search />
+      <footer>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Coded by Caroline Ko and is open-sourced on
+          <a
+            href="https://github.com/hancarol/weather-app"
+            target="_blank"
+            id="github"
+          >
+            GitHub
+          </a>
+          hosted by
+          <a href="https://www.netlify.com" target="_blank" id="netlify">
+            Netlify
+          </a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </footer>
     </div>
   );
 }
