@@ -12,11 +12,17 @@ function App() {
             href="https://github.com/hancarol/weather-app"
             target="_blank"
             id="github"
+            rel="noreferrer"
           >
             GitHub
           </a>
           hosted by
-          <a href="https://www.netlify.com" target="_blank" id="netlify">
+          <a
+            href="https://www.netlify.com"
+            target="_blank"
+            id="netlify"
+            rel="noreferrer"
+          >
             Netlify
           </a>
         </p>
