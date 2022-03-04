@@ -7,7 +7,7 @@ function App() {
       <Search />
       <footer>
         <p>
-          Coded by Caroline Ko and is open-sourced on
+          Coded by Caroline Ko and is open-sourced on {""}
           <a
             href="https://github.com/hancarol/weather-app"
             target="_blank"
@@ -16,7 +16,7 @@ function App() {
           >
             GitHub
           </a>
-          hosted by
+          {""} hosted by {""}
           <a
             href="https://www.netlify.com"
             target="_blank"
