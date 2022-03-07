@@ -39,16 +39,25 @@ export default function Search() {
     return (
       <div className="Search">
         {form}
-        <ul>
-          <li>City: {city}</li>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li> Weather Description: {weather.description} </li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {weather.wind}km/h</li>
-          <li>
-            <img src={weather.icon} alt="Weather Icon" />
-          </li>
-        </ul>
+        <div className="WeatherData">
+          <h1>{city}</h1>
+          <h5>Wed, 10:05 pm </h5>
+          <h5 className="text-capitalize">{weather.description} </h5>
+          <div className="container">
+            <div className="row">
+              <div className="col-6">
+                <img src={weather.icon} alt="Weather Icon" />
+                {Math.round(weather.temperature)}°C
+              </div>
+              <div className="col-6">
+                <ul>
+                  <li>Humidity: {weather.humidity}%</li>
+                  <li>Wind: {weather.wind}km/h</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   } else {
