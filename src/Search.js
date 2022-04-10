@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 export default function Search() {
@@ -12,6 +13,7 @@ export default function Search() {
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
@@ -40,8 +42,10 @@ export default function Search() {
       <div className="Search">
         {form}
         <div className="WeatherData">
-          <h1>{city}</h1>
-          <h5>Wed, 10:05 pm </h5>
+          <h1 className="text-capitalize">{city}</h1>
+          <h5>
+            <FormattedDate date={weather.date} />
+          </h5>
           <h5 className="text-capitalize">{weather.description} </h5>
           <div className="container">
             <div className="row">
