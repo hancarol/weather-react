@@ -8,7 +8,6 @@ export default function Search() {
   const [loaded, setLoaded] = useState(false);
 
   function handleResponse(response) {
-    setLoaded(true);
     setWeather({
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -17,6 +16,7 @@ export default function Search() {
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
+    setLoaded(true);
   }
 
   function handleSubmit(event) {
